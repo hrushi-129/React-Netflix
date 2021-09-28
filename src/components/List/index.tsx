@@ -24,19 +24,19 @@ const List = () => {
             }
 
             // ? Extra UX to feel you can't slide more if it is the first member
-            // if (slideNumber <= 0 && direction === "left") {
-            //     current.style.transform = `translateX(${value + distance}px)`;
-            //     setTimeout(() => {
-            //         current.style.transform = `translateX(${0}px)`;
-            //     }, 250);
-            // }
-            // if (slideNumber >= 4 && direction === "right") {
-            //     current.style.transform = `translateX(${value + distance}px)`;
-            //     setTimeout(() => {
-            //         current.style.transform = `translateX(${0}px)`;
-            //         setSlideNumber(10);
-            //     }, 250);
-            // }
+            if (slideNumber <= 0 && direction === "left") {
+                current.style.transform = `translateX(${value + distance}px)`;
+                setTimeout(() => {
+                    current.style.transform = `translateX(${0}px)`;
+                }, 250);
+            }
+            if (slideNumber >= 4 && direction === "right") {
+                current.style.transform = `translateX(${value + distance}px)`;
+                setTimeout(() => {
+                    current.style.transform = `translateX(${0}px)`;
+                    setSlideNumber(10);
+                }, 250);
+            }
         }
     };
 
