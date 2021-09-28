@@ -1,10 +1,19 @@
 import { Search, Notifications, ArrowDropDown } from "@material-ui/icons";
-
+import { useState } from "react";
 import "./navbar.scss";
 
 const Navbar = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    window.onscroll = () => {
+        setIsScrolled(window.scrollY === 0 ? false : true);
+        return () => (window.onscroll = null);
+    };
+
+    console.log(isScrolled);
+
     return (
-        <div className="navbar">
+        <div className={isScrolled ? "navbar scrolled" : "navbar"}>
             <div className="container">
                 <div className="left">
                     <img
@@ -25,7 +34,13 @@ const Navbar = () => {
                         src="https://ih0.redbubble.net/image.618427277.3222/flat,1000x1000,075,f.u2.jpg"
                         alt="NetFlix Profile"
                     />
-                    <ArrowDropDown className="svg-icon" />
+                    <div className="profile">
+                        <ArrowDropDown className="svg-icon arrow" />
+                        <div className="options">
+                            <span>Settings</span>
+                            <span>Logout</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
