@@ -34,8 +34,8 @@ const List = () => {
                 current.style.transform = `translateX(${value + distance}px)`;
                 setTimeout(() => {
                     current.style.transform = `translateX(${0}px)`;
-                    setSlideNumber(10);
                 }, 250);
+                setSlideNumber(0);
             }
         }
     };
