@@ -1,0 +1,27 @@
+.navbar {
+    color: white;
+    font-size: 1.4rem;
+    .container {
+        padding: 2rem 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            height: 2.5rem;
+        }
+        .svg-icon {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 2.4rem;
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+    }
+}
