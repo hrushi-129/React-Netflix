@@ -1,4 +1,26 @@
 .home {
     background-color: var(--main-color);
-    color: white;
+    font-size: 1.6rem;
+    overflow: hidden;
+}
+
+//  ? Following tags are for disabling selecing image
+//  ? https://stackoverflow.com/questions/6816080/how-to-disable-highlight-on-a-image/6934151
+
+img {
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+img::-moz-selection {
+    background-color: transparent;
+    color: #000;
+}
+
+img::selection {
+    background-color: transparent;
+    color: #000;
 }

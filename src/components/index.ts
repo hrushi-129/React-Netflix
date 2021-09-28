@@ -1,3 +1,5 @@
 import Navbar from "./Navbar";
+import Featured from "./Featured";
+import List from "./List";
 
-export { Navbar };
+export { Navbar, Featured, List };
