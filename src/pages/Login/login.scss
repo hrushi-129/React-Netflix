@@ -1,0 +1,83 @@
+.login {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 100%
+        ),
+        url("https://assets.nflxext.com/ffe/siteui/vlv3/45e6f443-8eff-4c7b-ba24-fbdc84c37718/6a6dbcd9-9bbc-423e-a84d-7e39fb76d701/IN-en-20210927-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    background-size: cover;
+    .top {
+        .wrapper {
+            padding: 2rem 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo {
+                height: 4rem;
+            }
+        }
+    }
+
+    .container {
+        font-size: 1.6rem;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        overflow: hidden;
+
+        form {
+            width: 30rem;
+            min-height: 30rem;
+            padding: 3rem;
+            border-radius: 0.5 rem;
+            background-color: rgb(11, 11, 11, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 2rem;
+            input {
+                height: 4rem;
+                border-radius: 0.5rem;
+                background-color: gray;
+                color: white;
+                padding-left: 1rem;
+                font-size: 1.6rem;
+                margin-bottom: 0.5rem;
+                &::placeholder {
+                    color: lightgray;
+                }
+            }
+            button {
+                height: 4rem;
+                border-radius: 0.5rem;
+                background-color: var(--netflix);
+                margin-bottom: 0.5rem;
+                font-size: 1.8rem;
+                font-weight: 500;
+                cursor: pointer;
+                border: none;
+            }
+            span {
+                color: lightgray;
+                b {
+                    color: white;
+                }
+            }
+            small {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    }
+}
