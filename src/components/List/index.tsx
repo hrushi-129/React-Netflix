@@ -7,9 +7,11 @@ import { setTimeout } from "timers";
 const List = () => {
     const listRef = useRef<HTMLDivElement>(null);
 
+    const [isMoved, setIsMoved] = useState(false);
     const [slideNumber, setSlideNumber] = useState(0);
 
     const handleClick = (direction: "left" | "right"): void => {
+        setIsMoved(true);
         const value: number = direction === "left" ? 230 : -230;
         if (listRef.current) {
             const { current } = listRef;
@@ -36,6 +38,7 @@ const List = () => {
                     current.style.transform = `translateX(${0}px)`;
                 }, 250);
                 setSlideNumber(0);
+                setIsMoved(false);
             }
         }
     };
@@ -47,10 +50,11 @@ const List = () => {
                 <ArrowBackOutlined
                     className="sliderArrow left"
                     onClick={() => handleClick("left")}
+                    style={{ display: !isMoved ? "none" : "block" }}
                 />
                 <div className="container" ref={listRef}>
                     {[...new Array(10)].map((item, idx) => (
-                        <ListItem key={idx} />
+                        <ListItem key={idx} index={idx} />
                     ))}
                 </div>
                 <ArrowForwardOutlined

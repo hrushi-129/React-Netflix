@@ -2,4 +2,72 @@
     width: 22.5rem;
     height: 12rem;
     background-color: white;
+    background-color: var(--main-color);
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    video {
+        height: 15rem;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &:hover {
+        width: 32.5rem;
+        height: 31rem;
+        position: absolute;
+        top: -15rem;
+        border-radius: 0.5rem;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07);
+        box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07);
+        img {
+            height: 15rem;
+        }
+        .itemInfo {
+            display: flex;
+            flex-direction: column;
+            padding: 0.5rem;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            .icons {
+                display: flex;
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+                .icon {
+                    border: 2px solid white;
+                    padding: 0.5rem;
+                    border-radius: 50%;
+                    font-size: 1.6rem;
+                }
+            }
+            .itemInfoTop {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: gray;
+                .limit {
+                    border: 1px solid gray;
+                    padding: 0.1rem 0.4rem;
+                }
+            }
+
+            .desc {
+                font-size: 1.3rem;
+            }
+
+            .genre {
+                font-size: 1.4rem;
+                color: lightgray;
+            }
+        }
+    }
 }
