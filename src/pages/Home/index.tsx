@@ -1,5 +1,5 @@
 import "./home.scss";
-import { Featured, Navbar, List } from "../components";
+import { Featured, Navbar, List } from "../../components";
 
 const Home = () => {
     return (
